@@ -7,7 +7,7 @@ const nextConfig = {
         name: 'login',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './LoginForm': './app/components/LoginForm.tsx',
+          './LoginForm': './components/LoginForm.tsx',
         },
         shared: {
           react: { singleton: true },

@@ -5,6 +5,7 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: 'host',
+        filename: 'static/chunks/remoteEntry.js',
         remotes: {
           login: 'login@http://localhost:3001/_next/static/chunks/remoteEntry.js',
           profile: 'profile@http://localhost:3002/_next/static/chunks/remoteEntry.js',

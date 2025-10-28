@@ -17,12 +17,15 @@ importers:
       typescript:
         specifier: 5.9.2
         version: 5.9.2
+      webpack:
+        specifier: ^5.102.1
+        version: 5.102.1
 
   apps/host:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^8.8.45
-        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
+        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
       next:
         specifier: 15.0.0
         version: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -56,7 +59,7 @@ importers:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^8.8.45
-        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
+        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
       next:
         specifier: 15.0.0
         version: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -90,7 +93,7 @@ importers:
     dependencies:
       '@module-federation/nextjs-mf':
         specifier: ^8.8.45
-        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
+        version: 8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)
       next:
         specifier: 15.0.0
         version: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3013,7 +3016,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@module-federation/enhanced@0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.13))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)':
+  '@module-federation/enhanced@0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)':
     dependencies:
       '@module-federation/bridge-react-webpack-plugin': 0.21.2
       '@module-federation/cli': 0.21.2(typescript@5.9.2)
@@ -3023,7 +3026,7 @@ snapshots:
       '@module-federation/inject-external-runtime-core-plugin': 0.21.2(@module-federation/runtime-tools@0.21.2)
       '@module-federation/managers': 0.21.2
       '@module-federation/manifest': 0.21.2(typescript@5.9.2)
-      '@module-federation/rspack': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.13))(typescript@5.9.2)
+      '@module-federation/rspack': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.17))(typescript@5.9.2)
       '@module-federation/runtime-tools': 0.21.2
       '@module-federation/sdk': 0.21.2
       btoa: 1.2.1
@@ -3070,10 +3073,10 @@ snapshots:
       - utf-8-validate
       - vue-tsc
 
-  '@module-federation/nextjs-mf@8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)':
+  '@module-federation/nextjs-mf@8.8.45(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-jsx@5.1.6(react@18.3.1))(typescript@5.9.2)(webpack@5.102.1)':
     dependencies:
-      '@module-federation/enhanced': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.13))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
-      '@module-federation/node': 2.7.21(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
+      '@module-federation/enhanced': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
+      '@module-federation/node': 2.7.21(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
       '@module-federation/runtime': 0.21.2
       '@module-federation/sdk': 0.21.2
       '@module-federation/webpack-bundler-runtime': 0.21.2
@@ -3093,9 +3096,9 @@ snapshots:
       - utf-8-validate
       - vue-tsc
 
-  '@module-federation/node@2.7.21(@rspack/core@1.5.8(@swc/helpers@0.5.13))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)':
+  '@module-federation/node@2.7.21(@rspack/core@1.5.8(@swc/helpers@0.5.17))(next@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)':
     dependencies:
-      '@module-federation/enhanced': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.13))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
+      '@module-federation/enhanced': 0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.17))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.2)(webpack@5.102.1)
       '@module-federation/runtime': 0.21.2
       '@module-federation/sdk': 0.21.2
       btoa: 1.2.1
@@ -3115,7 +3118,7 @@ snapshots:
       - utf-8-validate
       - vue-tsc
 
-  '@module-federation/rspack@0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.13))(typescript@5.9.2)':
+  '@module-federation/rspack@0.21.2(@rspack/core@1.5.8(@swc/helpers@0.5.17))(typescript@5.9.2)':
     dependencies:
       '@module-federation/bridge-react-webpack-plugin': 0.21.2
       '@module-federation/dts-plugin': 0.21.2(typescript@5.9.2)
@@ -3124,7 +3127,7 @@ snapshots:
       '@module-federation/manifest': 0.21.2(typescript@5.9.2)
       '@module-federation/runtime-tools': 0.21.2
       '@module-federation/sdk': 0.21.2
-      '@rspack/core': 1.5.8(@swc/helpers@0.5.13)
+      '@rspack/core': 1.5.8(@swc/helpers@0.5.17)
       btoa: 1.2.1
     optionalDependencies:
       typescript: 5.9.2
@@ -3280,13 +3283,13 @@ snapshots:
       '@rspack/binding-win32-ia32-msvc': 1.5.8
       '@rspack/binding-win32-x64-msvc': 1.5.8
 
-  '@rspack/core@1.5.8(@swc/helpers@0.5.13)':
+  '@rspack/core@1.5.8(@swc/helpers@0.5.17)':
     dependencies:
       '@module-federation/runtime-tools': 0.18.0
       '@rspack/binding': 1.5.8
       '@rspack/lite-tapable': 1.0.1
     optionalDependencies:
-      '@swc/helpers': 0.5.13
+      '@swc/helpers': 0.5.17
 
   '@rspack/lite-tapable@1.0.1': {}
 

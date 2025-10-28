@@ -7,7 +7,7 @@ const nextConfig = {
         name: 'profile',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './UserProfile': './app/components/UserProfile.tsx',
+          './UserProfile': './components/UserProfile.tsx',
         },
         shared: {
           react: { singleton: true },
