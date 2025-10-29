@@ -4,9 +4,11 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "pnpm run dev:host & pnpm run dev:login & pnpm run dev:profile",
+    "dev:script-poc": "pnpm --filter script-host start & pnpm --filter next-mfe dev",
     "dev:host": "pnpm --filter host dev",
     "dev:login": "pnpm --filter login dev",
     "dev:profile": "pnpm --filter profile dev",
+    "dev:next-poc": "pnpm --filter next-host dev & pnpm --filter next-mfe dev",
     "dev:single-spa": "pnpm run dev:root-config & pnpm run dev:mfe1",
     "dev:root-config": "pnpm --filter root-config start",
     "dev:mfe1": "pnpm --filter @poc/mfe1 start",
