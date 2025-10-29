@@ -1,0 +1,11 @@
+{
+  "name": "script-host",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve -p 9000 ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

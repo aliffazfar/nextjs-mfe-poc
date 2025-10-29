@@ -1,0 +1,20 @@
+{
+  "name": "script-mfe",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --port 8081"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

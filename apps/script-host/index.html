@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Host</title>
+    <style>
+        body { font-family: sans-serif; padding: 2em; }
+        #script-mfe-root { border: 2px dashed #ccc; padding: 1em; min-height: 100px; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Host Application</h1>
+    <p>This is the main container application. The micro-frontend will be loaded below:</p>
+    
+    <!-- The micro-frontend will render itself into this div -->
+    <div id="script-mfe-root"></div>
+
+    <!-- Load the micro-frontend's script. We'll serve this from another app. -->
+    <script src="http://localhost:8081/main.js"></script>
+</body>
+</html>
