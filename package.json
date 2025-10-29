@@ -7,6 +7,9 @@
     "dev:host": "pnpm --filter host dev",
     "dev:login": "pnpm --filter login dev",
     "dev:profile": "pnpm --filter profile dev",
+    "dev:single-spa": "pnpm run dev:root-config & pnpm run dev:mfe1",
+    "dev:root-config": "pnpm --filter root-config start",
+    "dev:mfe1": "pnpm --filter @poc/mfe1 start",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"

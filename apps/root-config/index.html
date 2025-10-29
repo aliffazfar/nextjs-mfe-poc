@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>single-spa POC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "single-spa": "https://esm.sh/single-spa@5.9.3"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main id="single-spa-container"></main>
+  <script type="module" src="root-config.js"></script>
+</body>
+</html>
