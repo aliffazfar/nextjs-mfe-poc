@@ -4,30 +4,53 @@ import React, { useEffect } from 'react';
 
 const MfeContainer = () => {
   useEffect(() => {
-    console.log('MfeContainer: useEffect triggered.');
     const scriptId = 'next-mfe-script';
-    
-    // Avoid adding the script multiple times
-    if (document.getElementById(scriptId)) {
-      console.log('MfeContainer: Script already exists.');
-      return;
-    }
 
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.src = 'http://localhost:3002/widget.js';
-    script.async = true;
-    
-    script.onload = () => {
-      console.log('MfeContainer: Script loaded successfully.');
-    };
-    
-    script.onerror = () => {
-      console.error('MfeContainer: Failed to load script.');
+    const loadWidget = async () => {
+      try {
+        console.log('MfeContainer: Fetching manifest...');
+        const response = await fetch('http://localhost:3002/manifest.json');
+        if (!response.ok) {
+          throw new Error(`Failed to fetch manifest: ${response.statusText}`);
+        }
+        const manifest = await response.json();
+        const widgetInfo = manifest['widget.js'];
+
+        if (!widgetInfo) {
+          throw new Error('Widget info not found in manifest.');
+        }
+
+        console.log('MfeContainer: Manifest loaded:', widgetInfo);
+
+        // Avoid adding the script multiple times
+        if (document.getElementById(scriptId)) {
+          console.log('MfeContainer: Script already exists.');
+          return;
+        }
+
+        const script = document.createElement('script');
+        script.id = scriptId;
+        script.src = widgetInfo.src;
+        script.integrity = widgetInfo.integrity;
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+
+        script.onload = () => {
+          console.log('MfeContainer: Script loaded and verified successfully.');
+        };
+
+        script.onerror = () => {
+          console.error('MfeContainer: Failed to load or verify script. Check integrity hash and script URL.');
+        };
+
+        document.body.appendChild(script);
+        console.log('MfeContainer: Script appended to body.');
+      } catch (error) {
+        console.error('MfeContainer: Error loading widget.', error);
+      }
     };
 
-    document.body.appendChild(script);
-    console.log('MfeContainer: Script appended to body.');
+    loadWidget();
 
     return () => {
       const existingScript = document.getElementById(scriptId);

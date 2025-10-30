@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm run watch:widget & next dev --webpack -p 3002",
+    "dev": "pnpm run build:widget && (pnpm run watch:widget & next dev --webpack -p 3002)",
     "build": "pnpm run build:widget && next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "build:widget": "esbuild src/expose-widget.tsx --bundle --outfile=public/widget.js --jsx=automatic",
-    "watch:widget": "esbuild src/expose-widget.tsx --bundle --outfile=public/widget.js --jsx=automatic --watch=forever"
+    "build:widget": "esbuild src/expose-widget.tsx --bundle --outfile=public/widget.js --jsx=automatic && node scripts/generate-manifest.mjs",
+    "watch:widget": "onchange 'src/**/*.tsx' -- pnpm run build:widget"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -23,6 +23,7 @@
     "esbuild": "^0.25.11",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "onchange": "^7.1.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
