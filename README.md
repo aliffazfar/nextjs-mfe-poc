@@ -24,6 +24,47 @@ This Turborepo includes the following packages/apps:
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
+### Micro-Frontend POCs
+
+This repository contains several Proof-of-Concept (POC) implementations for different micro-frontend architectures.
+
+#### 1. Next.js with Module Federation (`host`, `login`, `profile`)
+
+*   **Description:** A standard micro-frontend setup using Webpack Module Federation with the `@module-federation/nextjs-mf` plugin.
+*   **Apps:** `apps/host`, `apps/login`, `apps/profile`
+*   **How to run:**
+    ```sh
+    pnpm run dev
+    ```
+*   **Note:** This is a common approach for sharing components between Next.js applications.
+
+#### 2. Simple Script-Based MFE (`script-host`, `script-mfe`)
+
+*   **Description:** A basic example where a static `index.html` file loads a React component from a simple webpack dev server.
+*   **Apps:** `apps/script-host`, `apps/script-mfe`
+*   **How to run:**
+    ```sh
+    # In one terminal
+    pnpm --filter script-host start
+
+    # In another terminal
+    pnpm --filter @poc/script-mfe start
+    ```
+*   **Note:** This demonstrates the most fundamental micro-frontend concept of loading a script from another application.
+
+#### 3. Secure Script-Based Next.js MFE with SRI (`next-host`, `next-mfe`)
+
+*   **Description:** An advanced and secure POC demonstrating how a Next.js application (`next-host`) can dynamically and securely load a component from another Next.js application (`next-mfe`) without using Module Federation. This approach uses a manifest file and Subresource Integrity (SRI) to ensure the loaded code is authentic and has not been tampered with.
+*   **Apps:** `apps/next-host`, `apps/next-mfe`
+*   **How to run:**
+    ```sh
+    pnpm run dev:next-poc
+    ```
+*   **Security Features:**
+    *   **Subresource Integrity (SRI):** The host app verifies a cryptographic hash of the micro-frontend script before executing it.
+    *   **Manifest File:** The `next-mfe` app generates a `manifest.json` containing the script URL and integrity hash, allowing for decoupled deployments.
+    *   **Content Security Policy (CSP):** The `next-host` app implements a CSP to restrict script sources, adding another layer of security.
+
 ### Utilities
 
 This Turborepo has some additional tools already setup for you:
